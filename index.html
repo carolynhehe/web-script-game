@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dota Card Game</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@500&family=Pacifico&family=Roboto:ital,wght@1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link rel="icon" type="image" href="media/favicon.png">
+</head>
+
+<body>
+    <div class="video-wrapper">
+        <h1 class="game-title">Dota Card Game</h1>
+        <video autoplay loop muted>
+            <source src="media/cover.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="start-button">Start Game</button>
+    </div>
+    <div class="level-selection" style="display: none;">
+        <img src="media/levelSelection.jpg" alt="Background" class="background-image">
+        <h2>Select Your Attribute</h2>
+        <button class="level-button strength" disabled>
+            <p> Strength</p> 
+            <img src="https://github.com/carolynho0422/Image-Library/assets/89154660/cf60d34e-376a-4b08-b021-c40052ec2a6d"
+                alt="strength" class="level-icon">
+        </button>
+        <button class="level-button agility">
+            <p>Agility</p>
+            <img src="https://github.com/carolynho0422/Image-Library/assets/89154660/76f92fb8-519d-4dd2-a9b7-34fd96014756"
+                alt="agility" class="level-icon">
+        </button>
+        <button class="level-button intellect" disabled>
+            <p> Intelligence</p>
+            <img src="https://github.com/carolynho0422/Image-Library/assets/89154660/0f359f97-06a9-4e04-9f21-503b7c71ebae"
+                alt="intellect" class="level-icon">
+        </button>
+    </div>
+
+    <div class="matching-game" style="display: none;">
+        <div class="background-container">
+            <video id="game-background" autoplay muted>
+                <source src="media/board.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <button class="btnExit" id="exitGameTop"><span class="arrow">&lt;&lt;</span> Exit</button>
+        <div id="matches">Match <br>0</div>
+        <div id="turns"> Turn <br>10 </div>
+
+        <div class="cards-wrapper">
+            <div class="card" data-card-id="1" >
+                <div class="card-face front">
+                    <img src="media/card back.png" alt="Card Back">
+                </div>
+                <div class="card-face back">
+                    <img src="media/a1.png" alt="Card Front">
+                </div>
+            </div>
+            <div class="card" data-card-id="1">
+                <div class="card-face front">
+                    <img src="media/card back.png" alt="Card Back">
+                </div>
+                <div class="card-face back">
+                    <img src="media/a1.png" alt="Card Front">
+                </div>
+            </div>
+            <div class="card" data-card-id="2">
+                <div class="card-face front">
+                    <img src="media/card back.png" alt="Card Back">
+                </div>
+                <div class="card-face back">
+                    <img src="media/a2.png" alt="Card Front">
+                </div>
+            </div>
+            <div class="card" data-card-id="2">
+                <div class="card-face front">
+                    <img src="media/card back.png" alt="Card Back">
+                </div>
+                <div class="card-face back">
+                    <img src="media/a2.png" alt="Card Front">
+                </div>
+            </div>
+            <div class="card" data-card-id="3">
+                <div class="card-face front">
+                    <img src="media/card back.png" alt="Card Back">
+                </div>
+                <div class="card-face back">
+                    <img src="media/a3.png" alt="Card Front">
+                </div>
+            </div>
+            <div class="card" data-card-id="3">
+                <div class="card-face front">
+                    <img src="media/card back.png" alt="Card Back">
+                </div>
+                <div class="card-face back">
+                    <img src="media/a3.png" alt="Card Front">
+                </div>
+            </div>
+            <div class="card" data-card-id="4">
+                <div class="card-face front">
+                    <img src="media/card back.png" alt="Card Back">
+                </div>
+                <div class="card-face back">
+                    <img src="media/a4.png" alt="Card Front">
+                </div>
+            </div>
+            <div class="card" data-card-id="4">
+                <div class="card-face front">
+                    <img src="media/card back.png" alt="Card Back">
+                </div>
+                <div class="card-face back">
+                    <img src="media/a4.png" alt="Card Front">
+                </div>
+            </div>
+            <div class="card" data-card-id="5">
+                <div class="card-face front">
+                    <img src="media/card back.png" alt="Card Back">
+                </div>
+                <div class="card-face back">
+                    <img src="media/a5.png" alt="Card Front">
+                </div>
+            </div>
+            <div class="card" data-card-id="5">
+                <div class="card-face front">
+                    <img src="media/card back.png" alt="Card Back">
+                </div>
+                <div class="card-face back">
+                    <img src="media/a5.png" alt="Card Front">
+                </div>
+            </div>
+            <div class="card" data-card-id="6">
+                <div class="card-face front">
+                    <img src="media/card back.png" alt="Card Back">
+                </div>
+                <div class="card-face back">
+                    <img src="media/a6.png" alt="Card Front">
+                </div>
+            </div>
+            <div class="card" data-card-id="6">
+                <div class="card-face front">
+                    <img src="media/card back.png" alt="Card Back">
+                </div>
+                <div class="card-face back">
+                    <img src="media/a6.png" alt="Card Front">
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <video src="media/matching.webm" autoplay muted loop></video>
+        </div>
+        <div id="victoryModal" class="modal" style="display: none;">
+            <div class="modal-backdrop" id="victory-backdrop">
+                <div class="modal-content" id="victoryModalContent"> 
+                    <img src="media/victory.webp" alt="Victory Image">
+                    <p>Congratulations! You won!</p>
+                    <button id="playAgain">Play Again</button>
+                    <button id="exitGame">Go Back</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="failureModal" class="modal" style="display: none;">
+            <div class="modal-backdrop" id="failure-backdrop">
+                <div class="modal-content" id="failureModalContent">
+                    <img src="media/defeat.webp" alt="Defeat Image">
+                    <p>Sorry, you exceeded the maximum number of turns!</p>
+                    <button id="tryAgain">Try Again</button>
+                    <button id="giveUp">Give Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="comparing-game" style="display: none;">
+        <div class="background-container">
+            <video id="compare-game-background" autoplay muted>
+                <source src="media/board-compare.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button class="btnExit" id="exitGameTop"><span class="arrow">&lt;&lt;</span> Exit</button>
+            <div id="player-card" class="card-back"></div>
+            <div id="computer-card" class="card-back"></div>
+            <button class="btnStart" onclick="playGame()">Play Game</button>
+            <div id="result"></div>
+        </div>    
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
